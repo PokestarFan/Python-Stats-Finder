@@ -18,3 +18,8 @@ It will write to whichever directory you extracted it to.
 
 #Is this safe?
 As there are no application files, and all other files are open source, it is 100% safe.
+
+#Status of python program
+Current Status:
+
+* **Main Program**: **0%**
