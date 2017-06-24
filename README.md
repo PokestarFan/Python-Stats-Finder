@@ -9,7 +9,7 @@ All of the info will be logged to a [CSV](https://en.wikipedia.org/wiki/Comma-se
 
 #What software do I need?
 
-1. Python
+1. Python **3**
 2. PIP
 3. Whatever is listed in the requirements text file
 
