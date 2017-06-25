@@ -5,7 +5,7 @@ Welcome to Python Stats Finder!
 As the title suggests, it will find your computer stats and them log them to file
 
 #What filetype is the data in?
-All of the info will be logged to a SQLite table.
+All of the info will be logged to a CSV file.
 
 #What software do I need?
 
