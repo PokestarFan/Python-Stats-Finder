@@ -24,13 +24,15 @@ def get_ram():
     get_free_ram()
     get_used_ram()
 
-def create_dir(year_exists, month_exists):
-    if year_exists==true:
+def create_dir():
+    year_exists=os.path.isdir((str(datetime.datetime.now().year)))
+    if year_exists:
         os.chdir(str(datetime.datetime.now().year))
     else:
         os.mkdir(str(datetime.datetime.now().year))
         os.chdir(str(datetime.datetime.now().year))
-    if month_exists==true:
+    month_exists=os.path.isdir((str(datetime.datetime.now().year)))
+    if month_exists:
         os.chdir(str(datetime.datetime.now().month))
     else:
         os.mkdir(str(datetime.datetime.now().month))
@@ -41,6 +43,4 @@ def write_results():
 
 
 #actual execution
-year_exists=os.path.isdir((str(datetime.datetime.now().year)))
-month_exists=os.path.isdir((str(datetime.datetime.now().year)+'\\'+(str(datetime.datetime.now().month)))
-create_dir(year_exists, month_exists)
+create_dir()
