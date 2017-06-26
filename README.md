@@ -28,4 +28,5 @@ As there are no application files, and all other files are open source, it is 10
 
 Current Status:
 
-* **Main Program**: **4%**
+* **Main Program**: **100%**
+* **NEW FEATURE: CPU**: **0%**
