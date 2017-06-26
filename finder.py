@@ -40,26 +40,25 @@ def create_dir(): #create monthly/yearly directories
         os.chdir(str(datetime.datetime.now().month))
 
 def write_results(timestamp):
-    towrite=str("\n")+str(timestamp)+str(,)+str(used_ram)+str(,)+str(free_ram)+str(,)+str(percent_ram)
-    if os.stat(str(datetime.datetime.now().day).csv).st_size == 0:
-        today_file=open(str(datetime.datetime.now().day).csv, 'w') as file
-        today_file.write("timestamp, usedram, freeram, rampercentused")
+    used_ram=get_used_ram()
+    free_ram=get_free_ram()
+    percent_ram=get_percent_ram()
+    towrite=str("\n")+str(timestamp)+str(",")+str(used_ram)+str(",")+str(free_ram)+str(",")+str(percent_ram)
+    opening_text=str("timestamp, usedram, freeram, rampercentused")
+    today_file=open(str(datetime.datetime.now().day)+".csv", 'a+')
+    if os.stat(str(datetime.datetime.now().day)+".csv").st_size == 0:
+        today_file.write(opening_text)
         today_file.write(str(towrite))
-        today_file.close()
-    elif os.stat(str(datetime.datetime.now().day).csv).st_size < :
-        today_file=open(str(datetime.datetime.now().day).csv, 'w') as file
-        today_file.truncate()
-        today_file.close()
-        write_results()
     else:
-        today_file=open(str(datetime.datetime.now().day).csv, 'w') as file
-        today_file.write(str(towrite)))
-        today_file.close()
+        today_file.write(str(towrite))
 
 
 #actual execution
 create_dir()
+times_executed=0
 while True:
+    times_executed=1+times_executed
     timestamp=time.strftime("%H:%M:%S")
     write_results(timestamp)
+    print("Executed "+str(times_executed)+" times today")
     time.sleep(300)
